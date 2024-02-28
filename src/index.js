@@ -14,16 +14,16 @@ app.listen(ServerConfig.PORT, async () => {
   console.log(`Server Listening on port ${ServerConfig.PORT}`);
   Logger.info("Successfully started the server");
 
-  try {
-    console.log("hi");
-    const response = await mailsender.sendMail({
-      from: ServerConfig.GMAIL_EMAIL,
-      to: "ishanmoorjmalani009@gmail.com",
-      subject: "Service Test Working",
-      text: "Airline Service Testing",
-    });
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  //   console.log("hi");
+  //   const response = await mailsender.sendMail({
+  //     from: ServerConfig.GMAIL_EMAIL,
+  //     to: "ishanmoorjmalani009@gmail.com",
+  //     subject: "Service Test Working",
+  //     text: "Airline Service Testing",
+  //   });
+  //   console.log(response);
+  // } catch (error) {
+  //   console.log(error);
+  // }
 });

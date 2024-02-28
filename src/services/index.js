@@ -1,4 +1,6 @@
-module.exports = {};
+module.exports = {
+  EmailService: require("./email-service"),
+};
 
 // new technique:- exporting all the services files from index.js
 
