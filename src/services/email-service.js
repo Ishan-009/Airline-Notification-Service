@@ -1,9 +1,14 @@
 const { TicketRepository } = require("../repositories/index");
 const { MAILER } = require("../config/index");
-const ticket = require("../models/ticket");
+const Ticket = require("../models/ticket");
 
 const ticketRepository = new TicketRepository();
-async function sendEmail(mailFrom, mailTo, subject, text) {
+async function sendEmail(
+  mailFrom = "airlinenotification09@gmail.com",
+  mailTo,
+  subject,
+  text
+) {
   try {
     const response = await MAILER.sendMail({
       from: mailFrom,
